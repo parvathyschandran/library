@@ -1,0 +1,21 @@
+.user_librarian{
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.user_reader{
+    border: 10px solid white;
+    border-radius: 50%;
+}
+.user{
+    border: 1px solid black;
+    border-radius: 20%;
+    background-image: url('https://bookriot.com/wp-content/uploads/2020/03/library-libraries-feature-700x375-1-1280x720.jpg');
+
+}
+
+.home{
+    /* background-color: rgb(236, 189, 161); */
+    /* background-image:url('https://images.indianexpress.com/2021/06/Untitled-design-4-1.png') ; */
+    background-image: url('https://bookriot.com/wp-content/uploads/2020/03/library-libraries-feature-700x375-1-1280x720.jpg');
+    height: 580px;
+}

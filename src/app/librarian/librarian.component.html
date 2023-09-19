@@ -1,0 +1,34 @@
+<!-- book details table -->
+<div>
+    <div class="d-flex justify-content-around">
+        <!-- add book -->
+        <a routerLink="/library/add-book"><button class="btn btn-warning m-4">Add New Book</button></a>   
+         <!--add user  -->
+         <a routerLink="/library/add-user"><button class="btn btn-success m-4">Borrower List</button></a>   
+
+    </div>
+    
+    <h3 class="m-5 mt-0 text-center">Book Details</h3>
+
+    <table class="table ms-5">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Book Name</th>
+            <th scope="col">Author</th>
+            <th scope="col">Publication</th>
+            <th scope="col">Image Url</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let book of allbooks">
+          <tr>
+            <th>{{book.id}}</th>
+            <td>{{book.bookname}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.publication}}</td>
+            <td>{{book.image}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+

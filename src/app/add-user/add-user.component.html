@@ -1,0 +1,28 @@
+<a routerLink="/library/librarian"><button class="btn btn-warning m-3 ">Back </button></a>   
+<!-- borrower details -->
+<div class="borrow_container">
+    <h3 class="text-center m-3">Book Borrower Details</h3>
+    <table class="table ms-5">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Book Name</th>
+            <th>Borrower Name</th>
+            <th>Mobile Number</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let user of allusers" >
+          <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.bookname}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.number}}</td>
+            <td><button (click)="removeuser(user.id)" class="btn btn-danger">Received</button></td>
+            <!-- <td>
+                <button (click)="deleteAccount(account.id)""></button>
+            </td>  -->
+          </tr>
+        </tbody>
+      </table>
+</div>

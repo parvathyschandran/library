@@ -1,0 +1,47 @@
+<!-- register-form -->
+<div class="container border rounded" style="width: 540px; margin: 100px 0px 160px 380px;">
+    <h2 class="text-center fst-italic mt-3">Add New Book</h2>
+    <form [formGroup]="registerForm">
+        <!-- id -->
+        <div class="m-2" style="width: 500px;">
+            <label for="id">Book Id </label>
+            <input name="id" formControlName="id" id="id" type="text" class="form-control" required>
+        </div>
+        <div *ngIf="this.registerForm.get('id')?.errors&&this.registerForm.get('id')?.touched" class="m-2 text-danger">
+            Invalid book id </div>
+        <!-- bookname -->
+        <div class="m-2" style="width: 500px;">
+            <label for="bookname">Book Name</label>
+            <input name="bookname" formControlName="bookname" id="bookname" type="text" class="form-control" required>
+        </div>
+        <div *ngIf="this.registerForm.get('bookname')?.errors&&this.registerForm.get('bookname')?.touched"
+            class="m-2 text-danger">Invalid bookname</div>
+        <!-- publication -->
+        <div class="m-2" style="width: 500px;">
+            <label for="publication">Publication </label>
+            <input name="publication" formControlName="publication" id="publication" type="text" class="form-control"
+                required>
+        </div>
+        <div *ngIf="this.registerForm.get('publication')?.errors&&this.registerForm.get('publication')?.touched"
+            class="m-2 text-danger">Invalid publication</div>
+        <!-- authorname -->
+        <div class="m-2" style="width: 500px;">
+            <label for="author">Author Name</label>
+            <input name="author" formControlName="author" id="author" type="text" class="form-control" required>
+        </div>
+        <div *ngIf="this.registerForm.get('author')?.errors&&this.registerForm.get('author')?.touched"
+            class="m-2 text-danger">Invalid authorname</div>
+        <!-- image -->
+        <div class="m-2" style="width: 500px;">
+            <label for="image">Image Url</label>
+            <input name="image" formControlName="image" id="image" type="text" class="form-control" required>
+        </div>
+        <div *ngIf="this.registerForm.get('image')?.errors&&this.registerForm.get('image')?.touched"
+            class="m-2 text-danger">Invalid image url</div>
+        <!--buttons  -->
+        <div class="d-flex justify-content-around mt-3 mb-4">
+            <a routerLink="/library/librarian"><button type="submit" class="btn btn-danger me-5">cancel</button></a>
+            <a routerLink="/library/librarian"><button (click)="addbook()" type="submit" class="btn btn-success ms-5">Submit</button></a>
+        </div>
+    </form>
+</div>

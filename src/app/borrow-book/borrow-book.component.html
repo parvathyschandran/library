@@ -1,0 +1,41 @@
+<!-- register-form -->
+<div class="container border rounded" style="width: 600px; margin: 100px 0px 160px 380px;">
+    <h2 class="text-center fst-italic mt-3">Book Now</h2>
+    <form [formGroup] = "registerForm" >
+        
+        <!-- id -->
+        <div class="m-2" style="width: 500px;">
+            <label for="id">Book Id </label>
+            <input name="id" formControlName="id" id="id" type="text" class="form-control" required>
+        </div>
+        <div *ngIf="this.registerForm.get('id')?.errors&&this.registerForm.get('id')?.touched"
+            class="m-2 text-danger">Invalid book id</div>
+        <!-- username -->
+        <div class="m-2" style="width: 500px;">
+            <label for="username">Username</label>
+            <input name="username" formControlName="username" id="username" type="text" class="form-control" required>
+        </div>
+        <div *ngIf="this.registerForm.get('username')?.errors&&this.registerForm.get('username')?.touched"
+            class="m-2 text-danger">Invalid username</div>
+         <!-- bookname -->
+         <div class="m-2" style="width: 500px;">
+            <label for="bookname">Book Name</label>
+            <input name="bookname" formControlName="bookname" id="bookname" type="text" class="form-control" required>
+        </div>
+        <div *ngIf="this.registerForm.get('bookname')?.errors&&this.registerForm.get('bookname')?.touched"
+            class="m-2 text-danger">Invalid bookname</div>
+        <!--number  -->
+        <div class="m-2" style="width: 500px;">
+            <label for="number">Mobile Number</label>
+            <input name="number" formControlName="number" id="number" type="number" class="form-control"
+                required>
+        </div>
+        <div *ngIf="this.registerForm.get('number')?.errors&&this.registerForm.get('number')?.touched"
+            class="m-2 text-danger">Invalid mobile number</div>
+        <!--buttons  -->
+        <div class="d-flex justify-content-around mt-3 mb-4">
+            <a routerLink="/library/readers"><button type="submit" class="btn btn-danger me-5">cancel</button></a>
+            <a routerLink="/library/readers"><button (click)="borrowbook()" type="submit" class="btn btn-success ms-5">Submit</button></a>
+        </div>
+    </form>
+</div>
